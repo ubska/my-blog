@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('detail_text');
             $table->json('tags')->nullable();
             $table->foreignId('category_id')->constrained('article_categories');
-            $table->dateTime('published_at')->default(now());
+            $table->dateTime('published_at');
             $table->boolean('active')->default(true);
             $table->timestamps();
         });
